@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb
+    container_name: db-maria
+    ports:
+      - 3333:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: 1234
+    volumes:
+      - ./data-warehouse/volume:/var/lib/mysql
+
+# /mnt/c/Users/Personal/Documents/Projects/HENRY-DATA-SCIENCE-INDIVIDUAL-PROJECT

@@ -1,7 +1,11 @@
-# HENRY-INDIVIDUAL-PROJECT
+# ETL E-Commerce Data Quality
 
-## **Estudiante**: Fabian Palacios Borja - bfpalaciosborja@gmail.com - @FabianTatum
-### Repositorio del trabajo original - [aquí](https://github.fabiantatum)
+Este proyecto es un informe de la calidad de datos de diferentes fuentes de un E-Commerce de Argentina, en donde evaluamos los valores existentes, cuales pueden presentar fallas, cuales estan incompletos, cuales estan nulos y ofrecemos algunas recomendaciones para modificar estos datos antes de subirlos a un data warehouse.
+
+Luego de evaluar esta calidad, procedemos a realizar un proceso de ETL automatizado, en donde limpiamos los datos, los transformamos y los cargamos a un data warehouse el cual se encuentra en un contenedor de Docker.
+
+Este proceso se realiza automaticamente al ejecutar el script `./start.sh` y en ellos combinamos diferentes tecnologias para ciencia de datos, como Python para el proceso de ETL, Bash para la automatización, Docker para el almacenado de datos, Pandas para la visualización y evaluación de los datos y SQL para construir nuestro data warehouse.
+
 
 ## Contenido
 
@@ -44,7 +48,7 @@ sudo chmod +x ./start.sh
 ./start.sh
 ```
 
-### !PARA REALIZAR NUEVAMENTE LA INGESTA DE ARCHIVOS DEBO EJECUTAR `start.sh` CON UN ARGUMENTO:
+- Para realizar nuevamente el proceso de ETL con los deltas o actualizaciones debes ejecutar `start.sh` con un argumento:
 EJEMPLO:
 ```
 ./start.sh 1
@@ -56,9 +60,9 @@ EJEMPLO:
 ## Funcionamiento del Proceso ETL
 ![](_src/etl-process.png)
 
+Si deseas visualizar el data warehouse en un cliente MySQL como Workbench o XAMPP, el puerto de entrada es 3333 y la clave 1234.
 
-
-En caso de que tenga un docker compose de la versión 2 la línea `docker compose up -d` deberá modificarse por `docker-compose up -d`.
+- En caso de que tenga un docker compose de la versión 2 la línea `docker compose up -d` deberá modificarse por `docker-compose up -d`.
 
 **`EN CASO DE QUERER REINICIAR EL PROCESO COMPLETO SE PUEDE EJECUTAR:`**
 
@@ -66,11 +70,3 @@ En caso de que tenga un docker compose de la versión 2 la línea `docker compos
 ```
 ./restart.sh
 ```
-
-PARA MIS QUERIDOS INSTRUCTORES:
-+ Posibles fallas: 
-    + la ingesta de datos a la base de datos funciona en Linux Ubuntu, pero no en los contenedores WSL, intento copiar los archivos dentro del contenedor, pero cuando aplico `LOAD DATA INFILE` aparece el siguiente error:
-    ```
-    ERROR 13 (HY000) at line 3: Can't get stat of '/var/lib/mysql/data-output/Clientes.csv' (Errcode: 2 "No such file or directory")
-    ```
-    lo mismo sucede con `LOAD LOCAL DATA INFILE` por lo cual planeo realizar la ingesta con PostgresQL.

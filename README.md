@@ -64,6 +64,10 @@ Si deseas visualizar el data warehouse en un cliente MySQL como Workbench o XAMP
 
 - En caso de que tenga un docker compose de la versión 2 la línea `docker compose up -d` deberá modificarse por `docker-compose up -d`.
 
+- Puedes visuazar toda la actividad del proceso en tu consola:
+
+![](_src/logs_image.png)
+
 **`EN CASO DE QUERER REINICIAR EL PROCESO COMPLETO SE PUEDE EJECUTAR:`**
 
 - SOLO EN CASO DE HABER REALIZADO DOS VECES EL PROCESO DE ETL, DEVUELVE LOS DOCUMENTOS A SU ESTADO ORIGINAL

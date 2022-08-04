@@ -6,7 +6,7 @@ Luego de evaluar esta calidad, procedemos a realizar un proceso de ETL automatiz
 
 Este proceso se realiza automaticamente al ejecutar el script `./start.sh` y en ellos combinamos diferentes tecnologias para ciencia de datos, como Python para el proceso de ETL, Bash para la automatización, Docker para el almacenado de datos, Pandas para la visualización y evaluación de los datos y SQL para construir nuestro data warehouse.
 
-
+![ETL - ECOMMERCE](https://media.giphy.com/media/4xuzrPXcOzbVlzyYRR/giphy.gif)
 ## Contenido
 
 - Un informe de Calidad en los datos en Jupiter NB.

@@ -10,6 +10,7 @@ Este proceso se realiza automaticamente al ejecutar el script `./start.sh` y en 
 ## Contenido
 
 - Un informe de Calidad en los datos en Jupiter NB.
+    + Puedes ver el informe aquí: https://github.com/FabianTatum/ETL-ECOMMERCE-PYTHON-BASH/blob/main/data-quality-info.ipynb
 - Un proceso de ETL automatizado (Batch Process).
     + Archivo de ejecución principal `main.py`
     + Archivo de Logs o historial de procesos `logs.txt`
